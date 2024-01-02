@@ -1,0 +1,19 @@
+table {
+    background-color: rgba(0, 0, 0, 0.348);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+th {
+    color: #f7df1e;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+td {
+    color: #acdef9;
+}
+
+a {
+    color: #d08eef;
+}
