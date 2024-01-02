@@ -15,8 +15,11 @@ const loadNextPage = async () => {
     state.users = users;
 }
 
-const loadPreviewPage = () => {
+const loadPreviewPage = async () => {
+    if (state.currentPage === 1) return;
 
+    state.users =  await loadUsersByPage(state.currentPage - 1);
+    state.currentPage -= 1;
 }
 
 const onUserChanged = () => {

@@ -13,7 +13,6 @@ document.querySelector('#app').innerHTML = `
     </a>
     <h1>CRUD</h1>
     <div class="card" id="app-main__div">
-      
     </div>
   </div>
 `

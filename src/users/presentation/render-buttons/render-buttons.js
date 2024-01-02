@@ -1,5 +1,6 @@
 import './render-buttons.css';
 import userStore from "../../store/user-store.js";
+import {RenderTable} from "../render-table/render-table.js";
 
 /**
  *
@@ -17,8 +18,20 @@ export const RenderButtons = (element) => {
     labelCurrentPage.id = 'current-page__label';
     labelCurrentPage.innerText = userStore.getCurrentPage().toFixed();
 
-    element.append(buttonNext, labelCurrentPage, buttonPrev)
+    element.append(buttonPrev, labelCurrentPage, buttonNext)
 
     // events
+
+    buttonNext.addEventListener('click', async () => {
+        await userStore.loadNextPage();
+        labelCurrentPage.innerText = userStore.getCurrentPage().toFixed();
+        RenderTable(element)
+    });
+
+    buttonPrev.addEventListener('click', async ()=>{
+        await userStore.loadPreviewPage();
+        labelCurrentPage.innerText = userStore.getCurrentPage().toFixed();
+        RenderTable(element);
+    })
 
 }

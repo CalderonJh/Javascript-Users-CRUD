@@ -5,3 +5,7 @@ button{
 #current-page__label{
     font-size: 1.5rem;
 }
+
+#current-page__label{
+    color: white;
+}

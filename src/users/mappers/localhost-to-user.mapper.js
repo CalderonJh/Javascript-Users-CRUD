@@ -5,7 +5,7 @@ import {UserModel} from "../models/user.model.js";
  * @param localhostUser
  * @returns {UserModel}
  */
-export const localhostUserToModel = (localhostUser) => {
+export const localhostToUserMapper = (localhostUser) => {
     const {
         id,
         isActive,
