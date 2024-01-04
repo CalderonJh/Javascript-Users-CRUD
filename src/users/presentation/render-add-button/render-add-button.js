@@ -1,19 +1,17 @@
 import './render-add-button.css';
+import {showModal} from "../render-modal/render-modal-events.js";
 
 
 /**
  *
  * @param {HTMLDivElement} element
- * @param {Function} addFunction
- * @constructor
  */
-export const RenderAddButton = ( element, addFunction ) => {
-    // console.log(addFunction)
+export const RenderAddButton = ( element ) => {
     const buttonFab = document.createElement("button");
     buttonFab.innerText = 'Add';
     buttonFab.classList.add('fab__button');
 
     element.append(buttonFab)
-    buttonFab.addEventListener('click', addFunction)
+    buttonFab.addEventListener('click', showModal)
 
 }

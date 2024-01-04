@@ -16,6 +16,6 @@ document.querySelector('#app').innerHTML = `
     </div>
   </div>
 `
-UsersApp(document.querySelector('#app-main__div')).then().catch(()=>{
-    console.log('error')
-})
+
+const element = document.querySelector('#app-main__div')
+await UsersApp(element);
