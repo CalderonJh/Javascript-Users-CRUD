@@ -22,7 +22,7 @@ const loadPreviousPage = async () => {
     state.currentPage -= 1;
 }
 
-const onUserChanged = (updatedUser) => {
+const onUserChanged = async (updatedUser) => {
     let wasFound = false;
 
     state.users = state.users.map( user => {
@@ -35,7 +35,7 @@ const onUserChanged = (updatedUser) => {
 
     if (state.users.length < 10 && !wasFound ) state.users.push(updatedUser);
 
-    RenderTable();
+    location.reload();
 }
 
 const reloadPage = async () => {

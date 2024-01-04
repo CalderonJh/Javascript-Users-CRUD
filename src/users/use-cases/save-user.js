@@ -28,6 +28,6 @@ export const saveUser = async ( userLike) => {
     const userToSave = userToLocalhostMapper(user);
     if (userToSave.id) await patchUser(userToSave)
         else await postUser(userToSave);
-    UserStore.onUserChanged(user);
+    await UserStore.onUserChanged(user);
     hideModal();
 }
